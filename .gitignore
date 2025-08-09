@@ -1,0 +1,29 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Logs
+logs/
+*.log
+
+# dotenv / variáveis de ambiente
+.env
+.env.*
+
+# Diretórios temporários
+tmp/
+temp/
+
+# VSCode
+.vscode/
+
+# Sistema (macOS, Linux, Windows)
+.DS_Store
+Thumbs.db
+
+# Arquivos de build (caso existam futuramente)
+dist/
+build/
