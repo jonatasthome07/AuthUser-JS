@@ -3,3 +3,5 @@ import UserController from "../controllers/UserController.js"
 const router = express.Router()
 
 router.get("/", UserController.register)
+
+export default router

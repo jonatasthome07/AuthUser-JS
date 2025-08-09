@@ -3,8 +3,12 @@ import exphbs from 'express-handlebars';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
-import User from './models/User';
-import db from "./db/conn"
+import User from './models/User.js';
+import db from "./db/conn.js"
+import session from "express-session"
+import flash from "connect-flash"
+import userRoutes from "./routes/userRoutes.js"
+
 
 // Configurações iniciais
 dotenv.config();
@@ -14,7 +18,16 @@ const app = express();
 app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
 
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false,
+}));
+
+app.use("/", userRoutes);
+
 // Middlewares
+app.use(flash())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
