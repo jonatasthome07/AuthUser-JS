@@ -11,4 +11,8 @@ export default class UserController {
     static async loginPost (req,res){
         const {email, password} = req.body
     }
+
+    static async register (req,res){
+        res.render("user/registerForm")
+    }
 }

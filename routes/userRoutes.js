@@ -4,6 +4,6 @@ const router = express.Router()
 
 router.get("/login", UserController.login)
 router.post("/loginPost", UserController.loginPost)
-router.get("/register", UserController.login)
+router.get("/register", UserController.register)
 
 export default router
