@@ -15,4 +15,12 @@ export default class UserController {
     static async register (req,res){
         res.render("user/registerForm")
     }
+
+    static async registerPost (req,res){
+        const {name,email, password,confirmpass} = req.body
+        if (!name){
+            req.flash("msg", "O nome é um campo obrigatório")
+            return res.redirect("/register",)
+        }
+    }
 }

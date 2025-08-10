@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-   {{{body}}} 
+   {{{body}}}
+   {{#if msg}}
+  {{#each msg}}
+    <div class="alert">{{this}}</div>
+  {{/each}}
+{{/if}}
 </body>
 </html>

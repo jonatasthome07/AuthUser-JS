@@ -24,13 +24,20 @@ app.use(session({
   saveUninitialized: false,
 }));
 
-app.use("/", userRoutes);
-
-// Middlewares
 app.use(flash())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+
+// Middlewares
 app.use(express.static("public"));
+
+app.use((req, res, next) => {
+    res.locals.msg = req.flash("msg");
+    next();
+});
+
+app.use("/", userRoutes);
 
 // Iniciar servidor
 app.listen(process.env.PORT, () => {
