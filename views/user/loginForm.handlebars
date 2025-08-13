@@ -1,15 +1,18 @@
 <div class="form-container">
+    <img src="/img/172165-estender-500-palavras-x-dicas-para-impressionar-seus-clientes-em-uma-reuniao-de-negocios-1000x640.jpg" alt="" id="img-form">
     <form action="/loginPost" method="post">
-        <h2>Entre com sua conta!</h2>
         <div class="form-action">
+            <h2>Entre com sua conta!</h2>
             <label for="email">E-mail: </label>
             <input type="email" name="email" id="email" value="{{createUserNow.email}}">
         </div>
         <div class="form-action">
             <label for="password">Senha: </label>
             <input type="password" password="password" id="password" placeholder="Digite sua senha">
+            <input type="submit" value="Entrar">
         </div>
-        <input type="submit" value="Entrar">
+        
+        <p>Não tem uma conta ? <a href="/register">Crie aqui.</a></p>
     </form>
-    <p>Não tem uma conta ? <a href="/register">Crie aqui.</a></p>
+    
 </div>

@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+body {
+    background-color: #ccc;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#img-form{
+    width: 50%;
+    margin-left: 40px;
+    margin-top: 70px;
+    margin-right: 15px;
+}
+
+form {
+    margin-top: 70px;
+    margin-left: 20px;
+}
+
+.form-action input {
+    padding: 8px;
+    margin: 2px;
+}
+
+.form-action h2 {
+    margin-bottom: 5px;
+}
+
+.form-action input [type="submit"]{
+    padding: 5px;
+}
+
+.form-container p {
+    margin-top: 5p;
+}
